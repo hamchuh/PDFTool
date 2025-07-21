@@ -36,7 +36,7 @@ namespace PDFTool
             {
                 return openFileDialog.FileNames;
             }
-            else return null;
+            else return new string[0];
         }
 
         private void MergeDocuments() {
@@ -107,7 +107,7 @@ namespace PDFTool
         private void buttonMoveDown_Click(object sender, EventArgs e)
         {
             int selectedIndex = listBoxDocuments.SelectedIndex;
-            if (documentsToMerge.Count > 0 && selectedIndex < documentsToMerge.Count - 1)
+            if (documentsToMerge.Count > 0 && selectedIndex < documentsToMerge.Count - 1 && selectedIndex != -1)
             {
                 SwapIndices<string>(ref documentsToMerge, selectedIndex, selectedIndex + 1);
                 OnSelectedFilesChanged();

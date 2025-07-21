@@ -20,14 +20,16 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            #region Windows Form Designer generated code
+
+            /// <summary>
+            ///  Required method for Designer support - do not modify
+            ///  the contents of this method with the code editor.
+            /// </summary>
+
             TabControl = new TabControl();
             TabMerger = new TabPage();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -58,7 +60,7 @@
             TabControl.Location = new Point(0, 0);
             TabControl.Name = "TabControl";
             TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(1494, 1258);
+            TabControl.Size = new Size(978, 1144);
             TabControl.TabIndex = 0;
             // 
             // TabMerger
@@ -67,7 +69,7 @@
             TabMerger.Location = new Point(4, 41);
             TabMerger.Name = "TabMerger";
             TabMerger.Padding = new Padding(3);
-            TabMerger.Size = new Size(1486, 1213);
+            TabMerger.Size = new Size(970, 1099);
             TabMerger.TabIndex = 0;
             TabMerger.Text = "Merge";
             TabMerger.UseVisualStyleBackColor = true;
@@ -87,7 +89,7 @@
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 85F));
-            tableLayoutPanel2.Size = new Size(1480, 1207);
+            tableLayoutPanel2.Size = new Size(964, 1093);
             tableLayoutPanel2.TabIndex = 7;
             // 
             // listBoxDocuments
@@ -95,9 +97,9 @@
             listBoxDocuments.Dock = DockStyle.Fill;
             listBoxDocuments.FormattingEnabled = true;
             listBoxDocuments.ItemHeight = 32;
-            listBoxDocuments.Location = new Point(3, 184);
+            listBoxDocuments.Location = new Point(3, 166);
             listBoxDocuments.Name = "listBoxDocuments";
-            listBoxDocuments.Size = new Size(1104, 1020);
+            listBoxDocuments.Size = new Size(717, 924);
             listBoxDocuments.TabIndex = 2;
             listBoxDocuments.SelectedIndexChanged += listBoxDocuments_SelectedIndexChanged;
             // 
@@ -114,7 +116,7 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1104, 175);
+            tableLayoutPanel1.Size = new Size(717, 157);
             tableLayoutPanel1.TabIndex = 6;
             // 
             // buttonSelectDocuments
@@ -122,7 +124,7 @@
             buttonSelectDocuments.Dock = DockStyle.Fill;
             buttonSelectDocuments.Location = new Point(3, 3);
             buttonSelectDocuments.Name = "buttonSelectDocuments";
-            buttonSelectDocuments.Size = new Size(546, 169);
+            buttonSelectDocuments.Size = new Size(352, 151);
             buttonSelectDocuments.TabIndex = 0;
             buttonSelectDocuments.Text = "Select Documents";
             buttonSelectDocuments.UseVisualStyleBackColor = true;
@@ -132,9 +134,9 @@
             // 
             buttonMergeDocuments.Dock = DockStyle.Fill;
             buttonMergeDocuments.Enabled = false;
-            buttonMergeDocuments.Location = new Point(555, 3);
+            buttonMergeDocuments.Location = new Point(361, 3);
             buttonMergeDocuments.Name = "buttonMergeDocuments";
-            buttonMergeDocuments.Size = new Size(546, 169);
+            buttonMergeDocuments.Size = new Size(353, 151);
             buttonMergeDocuments.TabIndex = 1;
             buttonMergeDocuments.Text = "Merge Documents";
             buttonMergeDocuments.UseVisualStyleBackColor = true;
@@ -149,23 +151,23 @@
             tableLayoutPanel3.Controls.Add(buttonMoveDown, 0, 2);
             tableLayoutPanel3.Controls.Add(pictureBoxPreview, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(1113, 184);
+            tableLayoutPanel3.Location = new Point(726, 166);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 4;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel3.Size = new Size(364, 1020);
+            tableLayoutPanel3.Size = new Size(235, 924);
             tableLayoutPanel3.TabIndex = 7;
             // 
             // buttonRemove
             // 
             buttonRemove.Dock = DockStyle.Fill;
             buttonRemove.Enabled = false;
-            buttonRemove.Location = new Point(3, 819);
+            buttonRemove.Location = new Point(3, 740);
             buttonRemove.Name = "buttonRemove";
-            buttonRemove.Size = new Size(358, 198);
+            buttonRemove.Size = new Size(229, 181);
             buttonRemove.TabIndex = 5;
             buttonRemove.Text = "🗑️";
             buttonRemove.UseVisualStyleBackColor = true;
@@ -175,9 +177,9 @@
             // 
             buttonMoveUp.Dock = DockStyle.Fill;
             buttonMoveUp.Enabled = false;
-            buttonMoveUp.Location = new Point(3, 411);
+            buttonMoveUp.Location = new Point(3, 372);
             buttonMoveUp.Name = "buttonMoveUp";
-            buttonMoveUp.Size = new Size(358, 198);
+            buttonMoveUp.Size = new Size(229, 178);
             buttonMoveUp.TabIndex = 3;
             buttonMoveUp.Text = "↑";
             buttonMoveUp.UseVisualStyleBackColor = true;
@@ -187,9 +189,9 @@
             // 
             buttonMoveDown.Dock = DockStyle.Fill;
             buttonMoveDown.Enabled = false;
-            buttonMoveDown.Location = new Point(3, 615);
+            buttonMoveDown.Location = new Point(3, 556);
             buttonMoveDown.Name = "buttonMoveDown";
-            buttonMoveDown.Size = new Size(358, 198);
+            buttonMoveDown.Size = new Size(229, 178);
             buttonMoveDown.TabIndex = 4;
             buttonMoveDown.Text = "↓";
             buttonMoveDown.UseVisualStyleBackColor = true;
@@ -200,7 +202,7 @@
             pictureBoxPreview.Dock = DockStyle.Fill;
             pictureBoxPreview.Location = new Point(3, 3);
             pictureBoxPreview.Name = "pictureBoxPreview";
-            pictureBoxPreview.Size = new Size(358, 402);
+            pictureBoxPreview.Size = new Size(229, 363);
             pictureBoxPreview.TabIndex = 6;
             pictureBoxPreview.TabStop = false;
             // 
@@ -218,7 +220,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1494, 1258);
+            ClientSize = new Size(1000, 1200);
             Controls.Add(TabControl);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -230,9 +232,15 @@
             tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxPreview).EndInit();
             ResumeLayout(false);
+
+            #endregion
         }
 
-        #endregion
+        private void MainForm_Load()
+        {
+            this.Width = Screen.PrimaryScreen.Bounds.Width / 3;
+            this.Height = Screen.PrimaryScreen.Bounds.Height * 2 / 3;
+        }
 
         private TabControl TabControl;
         private TabPage TabMerger;
