@@ -1,22 +1,21 @@
-using MuPDF;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using MuPDF.NET;
-using System.ComponentModel;
 
 namespace PDFTool
 {
-    public partial class MainForm : Form
+    public partial class MainForm
     {
         private List<string> documentsToMerge = new List<string>() { };
 
-        public MainForm()
-        {
-            InitializeComponent();
-        }
 
         private void buttonSelectDocuments_Click(object sender, EventArgs e)
         {
             documentsToMerge.AddRange(SelectDocuments());
-            OnSelectedFilesChanged();
+            OnSelectedDocumentsChanged();
         }
 
 
@@ -39,7 +38,8 @@ namespace PDFTool
             else return new string[0];
         }
 
-        private void MergeDocuments() {
+        private void MergeDocuments()
+        {
             var saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "PDF Documents (*.pdf)|*.pdf";
             saveFileDialog.Title = "Choose the output destination";
@@ -56,7 +56,7 @@ namespace PDFTool
             }
         }
 
-        private void DocumentsToMerge_OnSelectedFilesChanged(object sender, EventArgs e)
+        private void DocumentsToMerge_OnSelectedDocumentsChanged(object sender, EventArgs e)
         {
             if (documentsToMerge.Count > 0)
             {
@@ -74,16 +74,10 @@ namespace PDFTool
             }
         }
 
-        private void listBoxDocuments_OnSelectedFilesChanged(object sender, EventArgs e)
+        private void listBoxDocuments_OnSelectedDocumentsChanged(object sender, EventArgs e)
         {
             listBoxDocuments.Items.Clear();
             listBoxDocuments.Items.AddRange(documentsToMerge.ToArray());
-        }
-
-        private void TabMerger_Enter(object sender, EventArgs e)
-        {
-            SelectedFilesChanged += DocumentsToMerge_OnSelectedFilesChanged;
-            SelectedFilesChanged += listBoxDocuments_OnSelectedFilesChanged;
         }
 
         private void listBoxDocuments_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,14 +88,7 @@ namespace PDFTool
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             documentsToMerge.Clear();
-            OnSelectedFilesChanged();
-        }
-
-        private void SwapIndices<T>(ref List<T> collection, int a, int b)
-        {
-            var temp = collection[a];
-            collection[a] = collection[b];
-            collection[b] = temp;
+            OnSelectedDocumentsChanged();
         }
 
         private void buttonMoveDown_Click(object sender, EventArgs e)
@@ -110,7 +97,7 @@ namespace PDFTool
             if (documentsToMerge.Count > 0 && selectedIndex < documentsToMerge.Count - 1 && selectedIndex != -1)
             {
                 SwapIndices<string>(ref documentsToMerge, selectedIndex, selectedIndex + 1);
-                OnSelectedFilesChanged();
+                OnSelectedDocumentsChanged();
                 listBoxDocuments.SelectedIndex = selectedIndex + 1;
             }
         }
@@ -121,7 +108,7 @@ namespace PDFTool
             if (documentsToMerge.Count > 0 && selectedIndex > 0)
             {
                 SwapIndices<string>(ref documentsToMerge, selectedIndex, selectedIndex - 1);
-                OnSelectedFilesChanged();
+                OnSelectedDocumentsChanged();
                 listBoxDocuments.SelectedIndex = selectedIndex - 1;
             }
         }
